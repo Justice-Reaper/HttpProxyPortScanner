@@ -16,15 +16,15 @@ ENDCOLOR="\e[0m"
 
 # Solicitar al usuario que ingrese el proxy
 echo -e "${YELLOW}Introduce el proxy (ejemplo: http://usuario:contraseña@ip:puerto - http://usuario:contraseña@dominio:puerto - http://ip:puerto - http://dominio:puerto)${ENDCOLOR}"
-read -p "Proxy: " proxy
+read -e -p "Proxy: " proxy
 
 # Solicitar al usuario que ingrese el objetivo
 echo -e "\n${YELLOW}Introduce el objetivo (ejemplo: http://ip - http://dominio - ip - dominio):${ENDCOLOR}"
-read -p "Objetivo: " target
+read -e -p "Objetivo: " target
 
 # Solicitar al usuario que ingrese el objetivo
 echo -e "\n${YELLOW}Introduce hasta que puerto deseas escanear (ejemplo: 3000):${ENDCOLOR}"
-read -p "Puertos: " ports
+read -e -p "Puertos: " ports
 
 # Archivo para almacenar los puertos abiertos
 output_file="openPortsHttpProxy.txt"
