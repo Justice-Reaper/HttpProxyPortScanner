@@ -22,6 +22,10 @@ read -p "Proxy: " proxy
 echo -e "\n${YELLOW}Introduce el objetivo (ejemplo: http://ip - http://dominio - ip - dominio):${ENDCOLOR}"
 read -p "Objetivo: " target
 
+# Solicitar al usuario que ingrese el objetivo
+echo -e "\n${YELLOW}Introduce hasta que puerto deseas escanear (ejemplo: 3000):${ENDCOLOR}"
+read -p "Puertos: " ports
+
 # Archivo para almacenar los puertos abiertos
 output_file="openPortsHttpProxy.txt"
 
@@ -29,15 +33,13 @@ output_file="openPortsHttpProxy.txt"
 rm "$output_file" &>/dev/null
 
 # Escanear puertos del 1 al 65535 y almacenar los puertos abiertos en un archivo
-echo -e "\n${YELLOW}[+] Iniciando el escaneo de puertos en $target a través del proxy...${ENDCOLOR}\n"
-for i in {1..80}; do
+for ((i=1; i<=ports; i++)); do
   status_code=$(curl -o /dev/null -s -w "%{http_code}" --proxy "$proxy" "$target:$i")
   if [ "$status_code" -eq 200 ]; then
     echo -e "\t${GREEN}[*] Port $i - OPEN${ENDCOLOR}"
     echo "Port $i - OPEN" >> "$output_file"
   fi
 done
-
 echo -e "\n${GREEN}[+] Escaneo completado, los puertos abiertos han sido guardados en $output_file${ENDCOLOR}"
 
 # Copiar los puertos abiertos en la clipboard
