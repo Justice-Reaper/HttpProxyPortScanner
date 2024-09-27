@@ -23,7 +23,7 @@ echo -e "\n${YELLOW}Introduce el objetivo (ejemplo: http://ip - http://dominio -
 read -e -p "Objetivo: " target
 
 # Solicitar al usuario que ingrese el objetivo
-echo -e "\n${YELLOW}Introduce hasta que puerto deseas escanear (ejemplo: 3000):${ENDCOLOR}"
+echo -e "\n${YELLOW}Introduce hasta que puerto deseas escanear (ejemplo: 65535):${ENDCOLOR}"
 read -e -p "Puertos: " ports
 
 # Archivo para almacenar los puertos abiertos
