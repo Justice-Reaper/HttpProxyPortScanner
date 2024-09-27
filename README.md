@@ -21,7 +21,6 @@ chmod +x HttpProxyPortScanner.sh
 ```
 
 # Ejemplo
-
 ```
 ./HttpProxyPortScanner.sh
 
