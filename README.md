@@ -37,7 +37,7 @@ Proxy: http://lance.friedman:o>WJ5-jD<5^m3@10.129.181.242:3128
 Introduce el objetivo (ejemplo: http://ip - http://dominio - ip - dominio):
 Objetivo: 127.0.0.1
 
-Introduce hasta que puerto deseas escanear (ejemplo: 3000):
+Introduce hasta que puerto deseas escanear (ejemplo: 65535):
 Puertos: 80
         [*] Port 22 - OPEN
         [*] Port 80 - OPEN
