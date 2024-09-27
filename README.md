@@ -9,11 +9,13 @@ Este script en Bash permite escanear puertos abiertos en un objetivo específico
 # Dependencias
 - Es necesarios instalar las siguientes dependenciales
 ```
-sudo apt intall -y curl sed tr xclip awk cat              
+sudo apt intall -y git curl sed tr xclip awk cat              
 ```
 
 # Uso
 ```
+git clone https://github.com/Justice-Reaper/HttpProxyPortScanner.git
+cd HttpProxyPortScanner
 chmod +x HttpProxyPortScanner.sh
 ./HttpProxyPortScanner.sh
 ```
