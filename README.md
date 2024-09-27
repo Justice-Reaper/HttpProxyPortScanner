@@ -9,7 +9,7 @@ Este script en Bash permite escanear puertos abiertos en un objetivo específico
 # Dependencias
 - Es necesarios instalar las siguientes dependenciales
 ```
-sudo apt install -y git curl sed tr xclip gawk cat              
+sudo apt install -y git curl sed xclip gawk coreutils              
 ```
 
 # Uso
